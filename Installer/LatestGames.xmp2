@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2.0</Version>
+  <Groups>
+    <Items>
+      <GroupItem Name="Plugin">
+        <ParentGroup />
+        <DisplayName>Plugin</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>The LatestGames plugin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>AlwaysOverwrite</UpdateOption>
+              <LocalFileName>..\LatestGames\bin\Release\LatestGames.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{32b2ea36-77c8-427b-853c-7fe11995810b}-LatestGames.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\process\LatestGames.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+    </Items>
+  </Groups>
+  <Sections>
+    <Items>
+      <SectionItem Guid="fed80259-a6b3-40ea-ade0-b907015d3dac" Name="Welcome Screen" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>Welcome to the Extension Installer for [Name]</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Description">
+              <Value>This will install [Name] version [Version] on your computer.
+It is recommended that you close all other applications before continuing.
+Click Next to continue or Cancel to exit Setup.</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Welcome Screen</PanelName>
+        <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="06438f1a-04bf-4f75-9bed-df1d35536958" Name="Install Section" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header Title">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Header title</Description>
+            </SectionParam>
+            <SectionParam Name="Header description">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Description of section, shown in under section title</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items>
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+              <Params>
+                <Items />
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+          </Items>
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Install Section</PanelName>
+        <WizardButtonsEnum>Next</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="a7389707-a1dd-4349-9c49-60d65d5e957b" Name="Setup Complete" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>The Extension Installer Wizard has successfully installed [Name].</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Show radio buttons">
+              <Value />
+              <ValueType>Bool</ValueType>
+              <Description>Use radiobutton in place of combobox</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Setup Complete</PanelName>
+        <WizardButtonsEnum>Finish</WizardButtonsEnum>
+      </SectionItem>
+    </Items>
+  </Sections>
+  <Dependencies>
+    <Items>
+      <DependencyItem>
+        <Type>MediaPortal</Type>
+        <Id />
+        <MinVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>6</Build>
+          <Revision>27644</Revision>
+        </MinVersion>
+        <MaxVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>6</Build>
+          <Revision>27644</Revision>
+        </MaxVersion>
+        <WarnOnly>false</WarnOnly>
+        <Message>LatestGames requires MediaPortal 1.6.0 Pre-release or later</Message>
+        <Name>MediaPortal</Name>
+      </DependencyItem>
+    </Items>
+  </Dependencies>
+  <PluginDependencies>
+    <Items>
+      <PluginDependencyItem AssemblyName="LatestGames.dll">
+        <CompatibleVersion>
+          <Items>
+            <CompatibleVersionItem>
+              <MinRequiredVersion>1.5.100.0</MinRequiredVersion>
+              <DesignedForVersion>1.5.100.0</DesignedForVersion>
+            </CompatibleVersionItem>
+          </Items>
+        </CompatibleVersion>
+        <SubSystemsUsed>
+          <Items />
+        </SubSystemsUsed>
+      </PluginDependencyItem>
+    </Items>
+  </PluginDependencies>
+  <GeneralInfo>
+    <Name>LatestGames</Name>
+    <Id>cb5ddc84-520e-455c-9411-093b72f0751d</Id>
+    <Author>ministerk</Author>
+    <HomePage>https://github.com/ministerkrister/mp-latest-games</HomePage>
+    <ForumPage />
+    <UpdateUrl>https://raw.github.com/ministerkrister/mp-latest-games/master/Installer/update.xml</UpdateUrl>
+    <Version>
+      <Major>1</Major>
+      <Minor>0</Minor>
+      <Build>0</Build>
+      <Revision>0</Revision>
+    </Version>
+    <ExtensionDescription>A simple process plugin that loads latest added My Emulators 2 games into some properties to show in basic home.</ExtensionDescription>
+    <VersionDescription>Initial release</VersionDescription>
+    <DevelopmentStatus>Beta</DevelopmentStatus>
+    <OnlineLocation>https://github.com/ministerkrister/mp-latest-games/releases/download/1.0.0.0/LatestGames_v1.0.0.0-Beta.mpe1</OnlineLocation>
+    <ReleaseDate>2016-01-15T23:18:53.2597751+01:00</ReleaseDate>
+    <Tags />
+    <Location>C:\Users\Kristofer\Source\Repos\mp-latest-games\Installer\[Name]_v[Version]-[DevelopmentStatus].mpe1</Location>
+    <Params>
+      <Items>
+        <SectionParam Name="Icon">
+          <Value />
+          <ValueType>File</ValueType>
+          <Description>The icon file of the package (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Online Icon">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Configuration file">
+          <Value />
+          <ValueType>Template</ValueType>
+          <Description>The file used to configure the extension.
+ If it has .exe extension the will be executed.
+ If it has .dll extension it's started like MP plugin configuration.</Description>
+        </SectionParam>
+        <SectionParam Name="Online Screenshots">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>Online stored screenshot urls separated by ; </Description>
+        </SectionParam>
+        <SectionParam Name="Force to uninstall on update">
+          <Value>YES</Value>
+          <ValueType>Bool</ValueType>
+          <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+        </SectionParam>
+      </Items>
+    </Params>
+  </GeneralInfo>
+  <UniqueFileList>
+    <Items>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>AlwaysOverwrite</UpdateOption>
+        <LocalFileName>..\LatestGames\bin\Release\LatestGames.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{32b2ea36-77c8-427b-853c-7fe11995810b}-LatestGames.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\process\LatestGames.dll</DestinationFilename>
+      </FileItem>
+    </Items>
+  </UniqueFileList>
+  <ProjectSettings>
+    <FolderGroups />
+    <ProjectFilename>LatestGames.xmp2</ProjectFilename>
+    <UpdatePath1>C:\Users\Kristofer\Source\Repos\mp-latest-games\Installer\update.xml</UpdatePath1>
+    <UpdatePath2 />
+    <UpdatePath3 />
+  </ProjectSettings>
+  <IsSkin>false</IsSkin>
+</PackageClass>
