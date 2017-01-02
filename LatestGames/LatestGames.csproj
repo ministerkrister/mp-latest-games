@@ -42,6 +42,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,10 +55,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client\SteamWeb.cs" />
+    <Compile Include="Configuration\LatestGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\LatestGames.Designer.cs">
+      <DependentUpon>LatestGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\JSONExtensions.cs" />
     <Compile Include="LatestGames.cs" />
-    <Compile Include="MyEmulatorsHelper.cs" />
+    <Compile Include="LatestGamesSettings.cs" />
+    <Compile Include="Model\EmulatorsGame.cs" />
+    <Compile Include="Model\SteamGame.cs" />
+    <Compile Include="Client\MyEmulators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\CheckPluginUtil.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\LatestGames.resx">
+      <DependentUpon>LatestGames.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /Y "$(ProjectDir)$(OutDir)LatestGames.*" "C:\Program Files (x86)\Team MediaPortal\MediaPortal\plugins\process\"</PostBuildEvent>
