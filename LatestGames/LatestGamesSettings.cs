@@ -45,8 +45,8 @@ namespace LatestGames
             using (Settings xmlreader = new MPSettings())
             {
                 EnableLatestGames = xmlreader.GetValueAsBool(cLatestGames, cEnableLatestGames, true);
-                EnableLatestSteamGames = xmlreader.GetValueAsBool(cLatestGames, cOrderByLatestPlay, false);
-                OrderByLatestPlay = xmlreader.GetValueAsBool(cLatestGames, cEnableLatestSteamGames, false);
+                OrderByLatestPlay = xmlreader.GetValueAsBool(cLatestGames, cOrderByLatestPlay, false);
+                EnableLatestSteamGames = xmlreader.GetValueAsBool(cLatestGames, cEnableLatestSteamGames, false);
                 SteamAPIKey = xmlreader.GetValueAsString(cLatestGames, cSteamAPIKey, string.Empty);
                 SteamUserId = xmlreader.GetValueAsString(cLatestGames, cSteamUserId, string.Empty);
             }

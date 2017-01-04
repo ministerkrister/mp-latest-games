@@ -72,7 +72,7 @@
             // 
             this.textBoxSteamApiKey.Location = new System.Drawing.Point(12, 145);
             this.textBoxSteamApiKey.Name = "textBoxSteamApiKey";
-            this.textBoxSteamApiKey.Size = new System.Drawing.Size(338, 20);
+            this.textBoxSteamApiKey.Size = new System.Drawing.Size(382, 20);
             this.textBoxSteamApiKey.TabIndex = 4;
             this.textBoxSteamApiKey.TextChanged += new System.EventHandler(this.textBoxSteamApiKey_TextChanged);
             // 
@@ -89,7 +89,7 @@
             // 
             this.textBoxSteamId.Location = new System.Drawing.Point(12, 204);
             this.textBoxSteamId.Name = "textBoxSteamId";
-            this.textBoxSteamId.Size = new System.Drawing.Size(338, 20);
+            this.textBoxSteamId.Size = new System.Drawing.Size(382, 20);
             this.textBoxSteamId.TabIndex = 6;
             this.textBoxSteamId.TextChanged += new System.EventHandler(this.textBoxSteamId_TextChanged);
             // 
@@ -109,9 +109,9 @@
             this.checkBoxEnableEmulators.AutoSize = true;
             this.checkBoxEnableEmulators.Location = new System.Drawing.Point(12, 28);
             this.checkBoxEnableEmulators.Name = "checkBoxEnableEmulators";
-            this.checkBoxEnableEmulators.Size = new System.Drawing.Size(197, 17);
+            this.checkBoxEnableEmulators.Size = new System.Drawing.Size(217, 17);
             this.checkBoxEnableEmulators.TabIndex = 7;
-            this.checkBoxEnableEmulators.Text = "Enable Latest Games for Emulators2";
+            this.checkBoxEnableEmulators.Text = "Enable Latest Games for My Emulators 2";
             this.checkBoxEnableEmulators.UseVisualStyleBackColor = true;
             this.checkBoxEnableEmulators.CheckedChanged += new System.EventHandler(this.checkBoxEnableEmulators_CheckedChanged);
             // 
@@ -120,9 +120,9 @@
             this.checkBoxEnableSteam.AutoSize = true;
             this.checkBoxEnableSteam.Location = new System.Drawing.Point(12, 100);
             this.checkBoxEnableSteam.Name = "checkBoxEnableSteam";
-            this.checkBoxEnableSteam.Size = new System.Drawing.Size(210, 17);
+            this.checkBoxEnableSteam.Size = new System.Drawing.Size(382, 17);
             this.checkBoxEnableSteam.TabIndex = 8;
-            this.checkBoxEnableSteam.Text = "Enable Latest Played Games on Steam";
+            this.checkBoxEnableSteam.Text = "Enable Latest Played Games on Steam (Api Key and steamID64 mandatory)";
             this.checkBoxEnableSteam.UseVisualStyleBackColor = true;
             this.checkBoxEnableSteam.CheckedChanged += new System.EventHandler(this.checkBoxEnableSteam_CheckedChanged);
             // 
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 241);
+            this.ClientSize = new System.Drawing.Size(410, 241);
             this.Controls.Add(this.checkBoxEnableSteam);
             this.Controls.Add(this.checkBoxEnableEmulators);
             this.Controls.Add(this.labelSteamApiKey);
