@@ -53,7 +53,7 @@ namespace LatestGames.Configuration
                 this.checkBoxEnableSteam.Enabled = true;
                 this.checkBoxEnableSteam.Checked = true;
             }
-            else if (this.checkBoxEnableSteam.Enabled && string.IsNullOrWhiteSpace(this.textBoxSteamApiKey.Text) && string.IsNullOrWhiteSpace(this.textBoxSteamId.Text))
+            else if (this.checkBoxEnableSteam.Enabled && (string.IsNullOrWhiteSpace(this.textBoxSteamApiKey.Text) || string.IsNullOrWhiteSpace(this.textBoxSteamId.Text)))
             {
                 this.checkBoxEnableSteam.Enabled = false;
                 this.checkBoxEnableSteam.Checked = false;
